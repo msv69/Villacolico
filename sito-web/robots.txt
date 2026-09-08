@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.SOSTITUISCI-CON-IL-TUO-DOMINIO.com/sitemap.xml
