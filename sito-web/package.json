@@ -1,0 +1,16 @@
+{
+  "name": "villa-colico-sito",
+  "version": "1.0.0",
+  "description": "Sito pubblico Villa a Colico — servito come file statici tramite un piccolo server Express",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
