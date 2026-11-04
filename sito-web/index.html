@@ -157,8 +157,10 @@
   .gallery-grid > div:nth-child(1) { grid-column: span 2; grid-row: span 2; }
   .gallery-tile { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 2px; display: flex; align-items: flex-end; padding: 16px; }
   .gallery-grid > div:nth-child(1) .gallery-tile { aspect-ratio: auto; height: 100%; }
-  .gallery-tile span { position: relative; color: #F3EFE2; font-family: 'Fraunces', serif; font-size: 14px; }
-  .gallery-tile::after { content: 'Sostituisci con foto reale'; position: absolute; top: 12px; right: 12px; font-size: 10px; letter-spacing: 0.03em; color: rgba(243,239,226,0.75); text-transform: uppercase; }
+  .gallery-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .gallery-tile::before { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 45%); z-index: 1; }
+  .gallery-tile span { position: relative; z-index: 2; color: #F3EFE2; font-family: 'Fraunces', serif; font-size: 14px; }
+  /* Finché manca il file immagine, il browser mostra questo sfondo al posto della foto rotta */
   .tile-1 { background: linear-gradient(155deg, #3E7A7E 0%, #16373B 100%); }
   .tile-2 { background: linear-gradient(155deg, #C97D4F 0%, #8C4A28 100%); }
   .tile-3 { background: linear-gradient(155deg, #6B7352 0%, #38402A 100%); }
@@ -318,13 +320,13 @@
     <div class="section-eyebrow">Foto</div>
     <h2>La villa, stagione dopo stagione</h2>
   </div>
-  <div class="gallery-note">Questi riquadri sono segnaposto grafici, non foto. Sostituiscili con le tue fotografie reali (senza filigrane di terzi) — nomi file e testo alternativo descrittivi, es. <code>alt="Villa a Colico, vista lago dal terrazzo"</code>, aiutano sia gli utenti sia la ricerca per immagini.</div>
+  <div class="gallery-note">Finché non carichi le tue foto nella cartella <code>immagini/</code>, qui sotto vedi uno sfondo colorato al posto della fotografia — è normale, sparisce appena il file è presente.</div>
   <div class="gallery-grid">
-    <div><div class="gallery-tile tile-1"><span>Facciata e giardino</span></div></div>
-    <div><div class="gallery-tile tile-2"><span>Terrazzo vista lago</span></div></div>
-    <div><div class="gallery-tile tile-3"><span>Soggiorno</span></div></div>
-    <div><div class="gallery-tile tile-4"><span>Camere</span></div></div>
-    <div><div class="gallery-tile tile-5"><span>Dintorni e lago</span></div></div>
+    <div><div class="gallery-tile tile-1"><img src="immagini/facciata-giardino.jpg" alt="Villa a Colico, facciata e giardino" loading="lazy" onerror="this.style.display='none'"><span>Facciata e giardino</span></div></div>
+    <div><div class="gallery-tile tile-2"><img src="immagini/terrazzo-vista-lago.jpg" alt="Villa a Colico, terrazzo con vista sul Lago di Como" loading="lazy" onerror="this.style.display='none'"><span>Terrazzo vista lago</span></div></div>
+    <div><div class="gallery-tile tile-3"><img src="immagini/soggiorno.jpg" alt="Villa a Colico, soggiorno" loading="lazy" onerror="this.style.display='none'"><span>Soggiorno</span></div></div>
+    <div><div class="gallery-tile tile-4"><img src="immagini/camere.jpg" alt="Villa a Colico, camera da letto" loading="lazy" onerror="this.style.display='none'"><span>Camere</span></div></div>
+    <div><div class="gallery-tile tile-5"><img src="immagini/dintorni-lago.jpg" alt="Villa a Colico, dintorni e Lago di Como" loading="lazy" onerror="this.style.display='none'"><span>Dintorni e lago</span></div></div>
   </div>
 </section>
 
